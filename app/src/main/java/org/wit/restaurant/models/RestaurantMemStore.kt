@@ -29,6 +29,7 @@ class RestaurantMemStore : RestaurantStore, AnkoLogger {
       foundRestaurant.title = restaurant.title
       foundRestaurant.description = restaurant.description
       foundRestaurant.image = restaurant.image
+      foundRestaurant.ratingBar = restaurant.ratingBar      // RATING BAR
       foundRestaurant.lat = restaurant.lat
       foundRestaurant.lng = restaurant.lng
       foundRestaurant.zoom = restaurant.zoom

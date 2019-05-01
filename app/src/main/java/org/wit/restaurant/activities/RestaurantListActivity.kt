@@ -13,6 +13,7 @@ import org.wit.restaurant.R
 import org.wit.restaurant.main.MainApp
 import org.wit.restaurant.models.RestaurantModel
 
+
 class RestaurantListActivity : AppCompatActivity(), RestaurantListener {
 
   lateinit var app: MainApp
@@ -24,7 +25,9 @@ class RestaurantListActivity : AppCompatActivity(), RestaurantListener {
     toolbarMain.title = title
     setSupportActionBar(toolbarMain)
 
-    val layoutManager = LinearLayoutManager(this)
+
+
+      val layoutManager = LinearLayoutManager(this)
     recyclerView.layoutManager = layoutManager
     recyclerView.adapter = RestaurantAdapter(app.restaurants.findAll(), this)
     loadRestaurants()

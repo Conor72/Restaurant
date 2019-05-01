@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import kotlinx.android.synthetic.main.activity_restaurant.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
@@ -17,8 +18,13 @@ import org.wit.restaurant.helpers.showImagePicker
 import org.wit.restaurant.main.MainApp
 import org.wit.restaurant.models.Location
 import org.wit.restaurant.models.RestaurantModel
+import android.widget.Toast
+
+
+
 
 class RestaurantActivity : AppCompatActivity(), AnkoLogger {
+
 
   var restaurant = RestaurantModel()
   lateinit var app: MainApp
@@ -35,12 +41,14 @@ class RestaurantActivity : AppCompatActivity(), AnkoLogger {
 
     app = application as MainApp
 
+
+
+
     if (intent.hasExtra("restaurant_edit")) {
       edit = true
         restaurant = intent.extras.getParcelable<RestaurantModel>("restaurant_edit")
         restaurantTitle.setText(restaurant.title)
       description.setText(restaurant.description)
-     // ratingBar.setText(restaurant.rating)
         restaurantImage.setImageBitmap(readImageFromPath(this, restaurant.image))
       if (restaurant.image != null) {
         chooseImage.setText(R.string.change_restaurant_image)
@@ -49,6 +57,7 @@ class RestaurantActivity : AppCompatActivity(), AnkoLogger {
     }
 
     btnAdd.setOnClickListener() {
+
         restaurant.title = restaurantTitle.text.toString()
         restaurant.description = description.text.toString()
       // restaurant.rating = ratingBar.text.toString()
