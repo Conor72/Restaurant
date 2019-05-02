@@ -51,6 +51,7 @@ class RestaurantListActivity : AppCompatActivity(), RestaurantListener {
     when (item?.itemId) {
       R.id.item_add -> startActivityForResult<RestaurantActivity>(0)
       R.id.item_map -> startActivity<RestaurantMapsActivity>()
+
     }
     return super.onOptionsItemSelected(item)
   }
