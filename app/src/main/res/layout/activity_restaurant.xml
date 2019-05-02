@@ -98,9 +98,21 @@
             android:textColor="@color/colorPrimary"
             android:textSize="16sp" />
 
+        <RatingBar
+            android:id="@+id/rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="80dp"
+            android:numStars="5"
+            android:rating="4.5"
+            android:stepSize="0.25"
+            android:progressTint="#FFD700"
+
+            />
+
         <Button
             android:id="@+id/btnAdd"
-            android:layout_width="match_parent"
+            android:layout_width="377dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@color/colorAccent"
@@ -111,18 +123,11 @@
             android:textColor="@color/colorPrimary"
             android:textSize="16sp" />
 
-        <RatingBar
-            android:id="@+id/rb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:numStars = "5"
-            android:stepSize="0.25"
-            android:rating= "4.5"
-
-            />
-
       </LinearLayout>
     </ScrollView>
+
+
+
 
   </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

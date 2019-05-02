@@ -43,7 +43,7 @@ class RestaurantAdapter constructor(private var restaurants: List<RestaurantMode
   class MainHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(restaurant: RestaurantModel, listener: RestaurantListener) {
-    // itemView.restaurantTitle.text = restaurant.title
+     itemView.restaurantTitleList.text = restaurant.title
       itemView.description.text = restaurant.description
      // itemView.rb.rating= restaurant.ratingBar      //RATING BAR
       itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, restaurant.image))

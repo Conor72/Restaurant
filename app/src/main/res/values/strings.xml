@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">Restaurant</string>
+  <string name="app_name">RestaurantRater</string>
   <string name="hint_restaurantTitle">Restaurant Title</string>
   <string name="hint_restaurantDescription">Description </string>
   <string name="button_addRestaurant">Add Restaurant</string>
