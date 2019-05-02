@@ -59,10 +59,13 @@ class RestaurantActivity : AppCompatActivity(), AnkoLogger {
 
         // restaurant.rating = ratingBar.text.toString()
         if (restaurant.title.isNullOrEmpty()) {
-          toast("Test")
+          toast("Please enter a Title")
         }
         else if (restaurant.description.isNullOrEmpty()) {
         toast("Please enter a Description")
+
+          else if (restaurant.image.isNullOrEmpty()){
+                    toast("Please select an image")
 
         }
         else {
